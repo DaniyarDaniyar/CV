@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daniyar Kylyshbekov</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer  src="index.js"></script>
+</head>
+<body>
+<div class="resume">
+    <div class="language-selector">
+        <select id="language">
+            <option value="en">Eng</option>
+            <option value="ru">Рус</option>
+        </select>
+    </div>
+    <div class="base">
+        <div class="profile">
+            <div class="photo">
+                <!--<img src="" /> -->
+                <i class="fas fa-mug-hot"></i>
+            </div>
+            <div class="info">
+                <h1 class="name" data-translate="name">Kylyshbekov Daniyar</h1>
+                <h2 class="job" data-translate="job">3rd year student</h2>
+            </div>
+        </div>
+        <div class="about">
+            <div class="circle">
+                <img src="photo.jpg" alt="Картинка">
+            </div>
+            <h3 data-translate="aboutTitle">About Me</h3>
+            <p data-translate="aboutText">
+                I am a third-year student specializing in information technology. I am passionate about IT, striving to continuously develop and deepen my knowledge.
+            </p>
+        </div>
+        <div class="contact">
+            <h3>Contact Me</h3>
+            <div class="call">
+                <a href="tel:+77762819942">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (776) 281 99-42</span>
+                </a>
+            </div>
+            <div class="email">
+                <a href="mailto:daniyarkylyshbekov269@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>daniyarkylyshbekov269@gmail.com</span>
+                </a>
+            </div>
+            <div class="website">
+                <a href="https://github.com/DaniyarDaniyar" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub: DaniyarDaniyar</span>
+                </a>
+            </div>
+            <div class="telegram">
+                <a href="https://t.me/Daniyar_Kylyshbekov" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram: @Daniyar_Kylyshbekov</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="func">
+        <div class="work">
+            <div class="row"><h3><i class="fa fa-briefcase"></i></h3><h3 data-translate="experienceTitle">Experience</h3></div>
+
+            <ul id="experienceList">
+                <!-- Элементы опыта будут добавлены динамически -->
+            </ul>
+        </div>
+        <div class="edu">
+            <div class="row"><h3><i class="fa fa-graduation-cap"></i></h3><h3 data-translate="educationTitle">Education</h3></div>
+            <ul id="educationList">
+                <li>
+                    <span>Management in IT</span><br>
+                    <small>Kazakh-British Technical University</small><br>
+                    <small>GPA: 2.7</small><br>
+                    <small>2022 - 2026</small>
+                  </li>
+                <!-- Элементы образования будут добавлены динамически -->
+            </ul>
+        </div>
+        <div class="skills-prog">
+            <div class="row"><h3><i class="fas fa-code"></i></h3><h3 data-translate="skills">Skills</h3></div>
+<!--            <h3 data-translate="skills"><i class="fas fa-code"></i>Programming Skills</h3>-->
+            <p data-translate="skill1">
+                I have basic knowledge of programming and markup languages such as Python, C++, HTML, CSS, and JavaScript. I possess knowledge of computer networks (OSI model, TCP/IP protocols) and experience with basic PostgreSQL queries and their visualization in Power BI. I am familiar with creating UML and sequence diagrams. I have basic skills in game development using Unity, Ren'Py, and the Pygame library. Additionally, I have introductory knowledge of accounting and programming in 1C.
+            </p>
+            <br>
+        </div>
+
+        <div class="skills-soft">
+            <div class="row"> <h3 data-translate="petProjects"><i class="fas fa-bezier-curve"></i>Pet-projects</h3></div>
+            <p data-translate="petProject1">
+                Simple website on html/css/js
+            </p>
+            <a href="https://github.com/DaniyarDaniyar/InteractiveWebAndMobile_FALL-2024/tree/main/final" data-translate="petProject1Link">
+                https://github.com/DaniyarDaniyar/InteractiveWebAndMobile_FALL-2024/tree/main/final
+            </a>
+            <br>
+            <p data-translate="petProject2">
+                2.5D Shooter game on Unity
+            </p>
+            <a href="https://github.com/DaniyarDaniyar/Unity_final_project" data-translate="petProject2Link">
+                https://github.com/DaniyarDaniyar/Unity_final_project
+            </a>
+            <br>
+            <p data-translate="petProject3">
+                Simple game on pygame
+            </p>
+            <a href="https://github.com/DaniyarDaniyar/Bank-Robbery" data-translate="petProject3Link">
+                https://github.com/DaniyarDaniyar/Bank-Robbery
+            </a>
+            <p data-translate="petProject4">
+                Visual novel on RenPy
+            </p>
+            <a href="https://github.com/DaniyarDaniyar/ND-Fall-Final" data-translate="petProject4Link">
+                https://github.com/DaniyarDaniyar/ND-Fall-Final
+            </a>
+            <br>
+        </div>
+
+    </div>
+<script>
+    // script.js
+    document.addEventListener("DOMContentLoaded", () => {
+        const languageSelector = document.getElementById("language");
+        const elementsToTranslate = {
+            title: document.getElementById("title"),
+            description: document.getElementById("description"),
+        };
+
+        // Загрузка переводов
+        fetch("translations.json")
+            .then((response) => response.json())
+            .then((translations) => {
+                // Функция для смены языка
+                const changeLanguage = (lang) => {
+                    const translation = translations[lang];
+                    if (translation) {
+                        elementsToTranslate.title.textContent = translation.title;
+                        elementsToTranslate.description.textContent = translation.description;
+                    }
+                };
+
+                // Обработчик события для выбора языка
+                languageSelector.addEventListener("change", (event) => {
+                    const selectedLanguage = event.target.value;
+                    changeLanguage(selectedLanguage);
+                });
+
+                // Устанавливаем язык по умолчанию
+                changeLanguage(languageSelector.value);
+            })
+            .catch((error) => console.error("Ошибка загрузки переводов:", error));
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const languageSelector = document.getElementById("language");
+        const elementsToTranslate = document.querySelectorAll("[data-translate]");
+
+        fetch("translations.json")
+            .then((response) => response.json())
+            .then((translations) => {
+                const changeLanguage = (lang) => {
+                    elementsToTranslate.forEach((element) => {
+                        const key = element.getAttribute("data-translate");
+                        if (translations[lang][key]) {
+                            element.textContent = translations[lang][key];
+                        }
+                    });
+                };
+
+                languageSelector.addEventListener("change", (event) => {
+                    changeLanguage(event.target.value);
+                });
+
+                changeLanguage(languageSelector.value);
+            })
+            .catch((error) => console.error("Error loading translations:", error));
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const languageSelector = document.getElementById("language");
+
+        fetch("translations.json")
+            .then((response) => response.json())
+            .then((translations) => {
+                const experienceList = document.getElementById("experienceList");
+                const educationList = document.getElementById("educationList");
+
+                const changeLanguage = (lang) => {
+                    const data = translations[lang];
+
+                    // Обновление заголовков
+                    document.querySelector("[data-translate='experienceTitle']").textContent = data.experienceTitle;
+                    document.querySelector("[data-translate='educationTitle']").textContent = data.educationTitle;
+
+                    // Обновление опыта
+                    experienceList.innerHTML = "";
+                    data.experienceItems.forEach((item) => {
+                        const li = document.createElement("li");
+                        li.innerHTML = `
+            <span>${item.title}</span><br>
+            <small>${item.company}</small><br>
+            <small>${item.period}</small><br>
+            <small>${item.skills}</small>
+          `;
+                        experienceList.appendChild(li);
+                    });
+
+                    // Обновление образования
+                    educationList.innerHTML = "";
+                    data.educationItems.forEach((item) => {
+                        const li = document.createElement("li");
+                        li.innerHTML = `
+            <span>${item.title}</span><br>
+            <small>${item.university}</small><br>
+            <small>${item.gpa}</small><br>
+            <small>${item.period}</small>
+          `;
+                        educationList.appendChild(li);
+                    });
+                };
+
+                // Слушатель смены языка
+                languageSelector.addEventListener("change", (event) => {
+                    changeLanguage(event.target.value);
+                });
+
+                // Установка языка по умолчанию
+                changeLanguage(languageSelector.value);
+            })
+            .catch((error) => console.error("Error loading translations:", error));
+    });
+
+</script>
+</body>
+</html>

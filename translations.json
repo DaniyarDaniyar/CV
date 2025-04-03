@@ -1,0 +1,74 @@
+{
+  "en": {
+    "name": "Kylyshbekov Daniyar",
+    "job": "3rd year student",
+    "aboutTitle": "About Me",
+    "aboutText": "I am a third-year student specializing in information technology. I am passionate about IT, striving to continuously develop and deepen my knowledge.",
+    "contactTitle": "Contact Me",
+    "experienceTitle": "Experience",
+    "educationTitle": "Education",
+    "programmingSkillsTitle": "Programming Skills",
+    "petProjectsTitle": "Pet-projects",
+    "experienceTitle": "Experience",
+    "experienceItems": [
+    ],
+    "educationTitle": "Education",
+    "educationItems": [
+      {
+        "title": "Management in IT",
+        "translation": "Менеджмент в ИТ",
+        "university": "Kazakh-British Technical University",
+        "universityTranslation": "Казахстанско-Британский технический университет",
+        "gpa": "GPA: 2.7",
+        "period": "2022 - 2026"
+      }
+    ],
+    "skills": "Skills",
+    "skill1": "I have basic knowledge of programming and markup languages such as Python, C++, HTML, CSS, and JavaScript. I possess knowledge of computer networks (OSI model, TCP/IP protocols) and experience with basic PostgreSQL queries and their visualization in Power BI. I am familiar with creating UML and sequence diagrams. I have basic skills in game development using Unity, Ren'Py, and the Pygame library. Additionally, I have introductory knowledge of accounting and programming in 1C.",
+    "petProjects": "Pet-projects",
+    "petProject1": "Simple website on html/css/js",
+    "petProject1Link": "https://github.com/DaniyarDaniyar/InteractiveWebAndMobile_FALL-2024/tree/main/final",
+    "petProject2": "2.5D Shooter game on Unity",
+    "petProject2Link": "https://github.com/DaniyarDaniyar/Unity_final_project",
+    "petProject3": "Simple game on pygame",
+    "petProject3Link": "https://github.com/DaniyarDaniyar/Bank-Robbery",
+    "petProject4": "Visual novel on RenPy",
+    "petProject4Link": "https://github.com/DaniyarDaniyar/ND-Fall-Final"
+  },
+  "ru": {
+    "name": "Кылышбеков Данияр",
+    "job": "Студент 3 курса",
+    "aboutTitle": "Обо мне",
+    "aboutText": "Я студент 3 курса по специальности в области информационных технологий. Увлечен IT, стремлюсь постоянно развиваться и углублять свои знания.",
+    "contactTitle": "Контакты",
+    "experienceTitle": "Опыт работы",
+    "educationTitle": "Образование",
+    "programmingSkillsTitle": "Навыки",
+    "petProjectsTitle": "Пет-проекты",
+    "experienceTitle": "Опыт работы",
+    "experienceItems": [
+    ],
+    "educationTitle": "Образование",
+    "educationItems": [
+      {
+        "title": "Менедмент в ИТ",
+        "translation": "Management in IT ",
+        "university": "Казахстанско-Британский технический университет",
+        "universityTranslation": "Kazakh-British Technical University",
+        "gpa": "Средний GPA: 2.7",
+        "period": "2022 - 2026"
+      }
+    ],
+    "skills": "Навыки программирования",
+    "skill1": "Имею базовые знания языков программирования и разметки, таких как Python, C++, HTML, CSS и JavaScript. Обладаю знаниями в области компьютерных сетей (модель OSI, протоколы TCP/IP), а также опытом работы с базовыми запросами в PostgreSQL и их визуализацией в Power BI. Знаком с построением UML и диаграмм последовательности. Владею базовыми навыками разработки игр с использованием движков Unity, Ren'Py и библиотеки Pygame. Имею начальные знания бухгалтерского учета и программирования в 1С.",
+    "petProjects": "Пет-проекты",
+    "petProject1": "Простой вебсайт на html/css/js",
+    "petProject1Link": "https://github.com/DaniyarDaniyar/InteractiveWebAndMobile_FALL-2024/tree/main/final",
+    "petProject2": "2.5D Игра на Unity",
+    "petProject2Link": "https://github.com/DaniyarDaniyar/Unity_final_project",
+    "petProject3": "Простая игра на pygame",
+    "petProject3Link": "https://github.com/DaniyarDaniyar/Bank-Robbery",
+    "petProject4": "Виз новелла на renpy",
+    "petProject4Link": "https://github.com/DaniyarDaniyar/ND-Fall-Final"
+  }
+}
